@@ -1,8 +1,8 @@
 import { expect, test, vi } from 'vitest'
-import { callUsed } from '../src/consumer'
+import { callUsed } from '../src/consumer.ts'
 
 // the factory leaves out `unused`, which `consumer.ts` imports but this test never calls
-vi.mock(import('../src/module'), () => ({
+vi.mock(import('../src/module.ts'), () => ({
   used: () => 'mocked',
 }))
 

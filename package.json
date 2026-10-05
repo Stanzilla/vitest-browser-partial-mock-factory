@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "test": "vitest run",
-    "test:node": "vitest run --browser.enabled=false"
+    "test:node": "vitest run --browser.enabled=false",
+    "test:native": "vitest run --browser.enabled=false --experimental.viteModuleRunner=false"
   },
   "devDependencies": {
     "@vitest/browser-playwright": "5.0.3",

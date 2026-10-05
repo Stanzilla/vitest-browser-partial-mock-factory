@@ -5,9 +5,12 @@ Reproduction for a Vitest Browser Mode bug: a `vi.mock` factory that omits an ex
 ```sh
 pnpm install
 pnpm exec playwright install chromium
-pnpm test       # Browser Mode (Chromium): fails
-pnpm test:node  # Node: passes
+pnpm test         # Browser Mode (Chromium): fails
+pnpm test:node    # Node: passes
+pnpm test:native  # Node without the module runner: passes
 ```
+
+The imports use `.ts` extensions because the native mode (`experimental.viteModuleRunner: false`) does not resolve imports without them.
 
 Browser Mode error:
 
