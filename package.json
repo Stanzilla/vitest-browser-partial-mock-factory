@@ -1,0 +1,14 @@
+{
+  "name": "vitest-browser-partial-mock-factory",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:node": "vitest run --browser.enabled=false"
+  },
+  "devDependencies": {
+    "@vitest/browser-playwright": "5.0.3",
+    "playwright": "1.63.0",
+    "vitest": "5.0.3"
+  }
+}
